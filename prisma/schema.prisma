@@ -14,30 +14,31 @@ datasource db {
 }
 
 model Users {
-  id              String            @id @default(cuid())
-  name            String
-  email           String            @unique
-  password        String
-  lokasi          String?
-  grafikPelanggan GrafikPelanggan[]
-  manajemen       Manajemen[]
+  id        String      @id @default(cuid())
+  name      String
+  email     String      @unique
+  password  String
+  lokasi    String?
+  chartData ChartData[]
+  manajemen Manajemen[]
 }
 
-model GrafikPelanggan {
+model ChartData {
   id        String   @id @default(cuid())
-  name      String
-  Users     Users?   @relation(fields: [usersId], references: [id])
-  usersId   String?
-  createdAt DateTime
+  date      DateTime @default(now())
+  pelanggan Int
+  User      Users?   @relation(fields: [userId], references: [id])
+  userId    String?
+  createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
 model Manajemen {
   id        String   @id @default(cuid())
   pricing   Int
-  tanngal   DateTime
-  Users     Users?   @relation(fields: [usersId], references: [id])
-  usersId   String?
-  createdAt DateTime
+  tanggal   DateTime @default(now())
+  User      Users?   @relation(fields: [userId], references: [id])
+  userId    String?
+  createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

@@ -46,12 +46,11 @@ GET http://localhost:3000/auth/me
 DELETE http://localhost:3000/auth/logout
 
 ### get all product
-GET http://localhost:3000/products
+GET http://localhost:3000/manajemen
 ### crearte product
-POST http://localhost:3000/products
+POST http://localhost:3000/manajemen
 Content-Type: application/json
 
 {
-    "name": "teh",
-    "price": "1000"
+    "pricing": 10000
 }

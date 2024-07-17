@@ -6,13 +6,14 @@ import {
   getUsers,
   updateUser,
 } from "../controllers/user.controller.js";
+import { verifyUser } from "../middleware/AuthUser.js";
 // import { verifyUser, verifyAdmin } from "../middleware/AuthUser.js";
 const router = Router();
 
-router.get("/", getUsers);
-router.get("/:id", getUserById);
-router.post("/", createUser);
-router.patch("/:id", updateUser);
-router.delete("/:id", deleteUser);
+router.get("/", verifyUser, getUsers);
+router.get("/:id", verifyUser, getUserById);
+router.post("/", verifyUser, createUser);
+router.patch("/:id", verifyUser, updateUser);
+router.delete("/:id", verifyUser, deleteUser);
 
 export default router;
