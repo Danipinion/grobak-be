@@ -35,7 +35,6 @@ export const getUserById = async (req, res) => {
 };
 
 export const createUser = async (req, res) => {
-  console.log("🚀 ~ createUser ~ req:", req);
   const { name, email, password, confPassword } = req.body;
   if (password !== confPassword)
     return res

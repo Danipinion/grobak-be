@@ -14,8 +14,30 @@ datasource db {
 }
 
 model Users {
-  id       String @id @default(cuid())
-  name     String
-  email    String @unique
-  password String
+  id              String            @id @default(cuid())
+  name            String
+  email           String            @unique
+  password        String
+  lokasi          String?
+  grafikPelanggan GrafikPelanggan[]
+  manajemen       Manajemen[]
+}
+
+model GrafikPelanggan {
+  id        String   @id @default(cuid())
+  name      String
+  Users     Users?   @relation(fields: [usersId], references: [id])
+  usersId   String?
+  createdAt DateTime
+  updatedAt DateTime @updatedAt
+}
+
+model Manajemen {
+  id        String   @id @default(cuid())
+  pricing   Int
+  tanngal   DateTime
+  Users     Users?   @relation(fields: [usersId], references: [id])
+  usersId   String?
+  createdAt DateTime
+  updatedAt DateTime @updatedAt
 }
