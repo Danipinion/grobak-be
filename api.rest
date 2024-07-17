@@ -1,0 +1,58 @@
+### get all user
+GET http://localhost:3001/users
+
+### get user by id
+GET http://localhost:3001/users/clyd47lmo0000va5ep5125sgc
+
+### Create user
+POST http://localhost:3001/users
+Content-Type: application/json
+
+{
+    "name": "test1",
+    "email": "test1@gmail.com",
+    "password": "test",
+    "confPassword": "test",
+}
+
+### Update user
+PATCH  http://localhost:3001/users/clyd47lmo0000va5ep5125sgc
+Content-Type: application/json
+
+{
+    "name": "test1",
+    "email": "test1@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+### Delete user
+DELETE http://localhost:3001/users/clyd47lmo0000va5ep5125sgc
+
+
+### login
+POST http://localhost:3001/auth/login
+Content-Type: application/json
+
+{
+    "email": "test2@gmail.com",
+    "password": "test"
+}
+
+### get data me
+GET http://localhost:3001/auth/me
+
+### logout
+DELETE http://localhost:3001/auth/logout
+
+### get all product
+GET http://localhost:3001/products
+### crearte product
+POST http://localhost:3001/products
+Content-Type: application/json
+
+{
+    "name": "teh",
+    "price": "1000"
+}
