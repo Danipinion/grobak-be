@@ -34,11 +34,12 @@ model ChartData {
 }
 
 model Manajemen {
-  id        String   @id @default(cuid())
-  pricing   Int
-  tanggal   DateTime @default(now())
-  User      Users?   @relation(fields: [userId], references: [id])
-  userId    String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id          String   @id @default(cuid())
+  pengeluaran Int?
+  pemasukan   Int?
+  tanggal     DateTime @default(now())
+  User        Users?   @relation(fields: [userId], references: [id])
+  userId      String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }

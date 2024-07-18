@@ -13,12 +13,13 @@ export const getManajemen = async (req, res) => {
 };
 
 export const createManajemen = async (req, res) => {
-  const { pricing } = req.body;
+  const { pengeluaran = 0, pemasukan = 0 } = req.body;
 
   try {
     const response = await prisma.manajemen.create({
       data: {
-        pricing,
+        pengeluaran,
+        pemasukan,
         User: {
           connect: {
             id: req.userId,

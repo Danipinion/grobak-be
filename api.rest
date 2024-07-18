@@ -1,11 +1,11 @@
 ### get all user
-GET http://localhost:3000/users
+GET http://localhost:3001/users
 
 ### get user by id
-GET http://localhost:3000/users/clyd47lmo0000va5ep5125sgc
+GET http://localhost:3001/users/clyd47lmo0000va5ep5125sgc
 
 ### Create user
-POST http://localhost:3000/users
+POST http://localhost:3001/users
 Content-Type: application/json
 
 {
@@ -16,7 +16,7 @@ Content-Type: application/json
 }
 
 ### Update user
-PATCH  http://localhost:3000/users/clyqge6io000014j6tjf9odnb
+PATCH  http://localhost:3001/users/clyqge6io000014j6tjf9odnb
 Content-Type: application/json
 
 {
@@ -27,11 +27,11 @@ Content-Type: application/json
 }
 
 ### Delete user
-DELETE http://localhost:3000/users/clyd47lmo0000va5ep5125sgc
+DELETE http://localhost:3001/users/clyd47lmo0000va5ep5125sgc
 
 
 ### login
-POST http://localhost:3000/auth/login
+POST http://localhost:3001/auth/login
 Content-Type: application/json
 
 {
@@ -40,17 +40,20 @@ Content-Type: application/json
 }
 
 ### get data me
-GET http://localhost:3000/auth/me
+GET http://localhost:3001/auth/me
 
 ### logout
-DELETE http://localhost:3000/auth/logout
+DELETE http://localhost:3001/auth/logout
 
-### get all product
-GET http://localhost:3000/manajemen
-### crearte product
-POST http://localhost:3000/manajemen
+### get all manajemen
+GET http://localhost:3001/manajemen
+### crearte manajemen
+POST http://localhost:3001/manajemen
 Content-Type: application/json
 
 {
-    "pricing": 10000
+    "pengeluaran": 10000
 }
+
+###
+GET http://192.168.24.106:11434/
