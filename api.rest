@@ -58,8 +58,8 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3001/chart/clz2e2d49000so794mmufhasm
+GET http://localhost:3001/chart/clz2ph2vj000010kxsbj6o527
 
 ###
-POST  http://localhost:3001/chart/clz2e2d49000so794mmufhasm
+POST  http://localhost:3001/chart/clz2ph2vj000010kxsbj6o527
 Content-Type: application/json

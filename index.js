@@ -11,7 +11,13 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
-app.use(cors({ credentials: true, origin: "https://grobak-fe.vercel.app" }));
+app.use(
+  cors({
+    credentials: true,
+    origin: "https://grobak-fe.vercel.app",
+    // origin: "http://localhost:5174",
+  })
+);
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
