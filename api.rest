@@ -40,7 +40,7 @@ Content-Type: application/json
 }
 
 ### get data me
-GET http://localhost:3001/auth/me
+GET http://localhost:3001/auth/me/clz2ph2vj000010kxsbj6o527
 
 ### logout
 DELETE http://localhost:3001/auth/logout
@@ -63,3 +63,14 @@ GET http://localhost:3001/chart/clz2ph2vj000010kxsbj6o527
 ###
 POST  http://localhost:3001/chart/clz2ph2vj000010kxsbj6o527
 Content-Type: application/json
+
+### Get Message
+GET http://localhost:3001/message
+
+### Create Message
+POST http://localhost:3001/message/clz2ph2vj000010kxsbj6o527
+Content-Type: application/json
+
+{
+    "text": "test from aloha"
+}
