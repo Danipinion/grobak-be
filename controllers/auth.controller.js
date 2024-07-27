@@ -33,7 +33,7 @@ export const Me = async (req, res) => {
   try {
     const user = await prisma.users.findUnique({
       where: {
-        id: req.session.userId,
+        id: req.params.id,
       },
       select: {
         id: true,

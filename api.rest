@@ -10,9 +10,9 @@ Content-Type: application/json
 
 {
     "name": "test1",
-    "email": "test1@gmail.com",
-    "password": "test",
-    "confPassword": "test"
+    "email": "1",
+    "password": "1",
+    "confPassword": "1"
 }
 
 ### Update user
@@ -35,8 +35,8 @@ POST http://localhost:3001/auth/login
 Content-Type: application/json
 
 {
-    "email": "test1@gmail.com",
-    "password": "test"
+    "email": "dani ",
+    "password": "1"
 }
 
 ### get data me
@@ -46,14 +46,20 @@ GET http://localhost:3001/auth/me
 DELETE http://localhost:3001/auth/logout
 
 ### get all manajemen
-GET http://localhost:3001/manajemen
+GET http://localhost:3001/manajemen/clz2e2d49000so794mmufhasm
 ### crearte manajemen
-POST http://localhost:3001/manajemen
+POST http://localhost:3001/manajemen/clz2e2d49000so794mmufhasm
 Content-Type: application/json
 
 {
-    "pengeluaran": 10000
+    "pengeluaran": 10000,
+    "keterangan": "beli",
+    "tipe": false
 }
 
 ###
-GET http://192.168.24.106:11434/
+GET http://localhost:3001/chart/clz2e2d49000so794mmufhasm
+
+###
+POST  http://localhost:3001/chart/clz2e2d49000so794mmufhasm
+Content-Type: application/json

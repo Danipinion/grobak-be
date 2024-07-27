@@ -5,6 +5,7 @@ import session from "express-session";
 import userRoute from "./routes/user.route.js";
 import AuthRoute from "./routes/auth.route.js";
 import manajemenRoute from "./routes/manajemen.route.js";
+import chartRoute from "./routes/data.route.js";
 
 dotenv.config();
 const app = express();
@@ -22,6 +23,7 @@ app.use(
 
 app.use("/users", userRoute);
 app.use("/auth", AuthRoute);
+app.use("/chart", chartRoute);
 app.use("/manajemen", manajemenRoute);
 
 app.listen(process.env.APP_PORT, () => {

@@ -37,6 +37,8 @@ model Manajemen {
   id          String   @id @default(cuid())
   pengeluaran Int?
   pemasukan   Int?
+  keterangan  String
+  tipe        Boolean
   tanggal     DateTime @default(now())
   User        Users?   @relation(fields: [userId], references: [id])
   userId      String?
